@@ -8,8 +8,8 @@ public class Ball extends GameObject {
 
     public static final float SIZE = 16;
 
-    public static final float MAX_SPEED_X = 4f;
-    public static final float MAX_SPEED_Y = 4f;
+    private float max_speed_x = 4f;
+    private float max_speed_y = 4f;
 
     public static final float DAMPING = 0.05f;
 
@@ -22,7 +22,7 @@ public class Ball extends GameObject {
     public Ball(float x, float y) {
         super(x, y, new Sprite(Color.WHITE, SIZE, SIZE));
 
-        this.velocityX = -MAX_SPEED_X;
+        this.velocityX = -this.max_speed_x;
         this.velocityY = 0;
 
         this.startX = x;
@@ -40,10 +40,10 @@ public class Ball extends GameObject {
 
         this.velocityY += (this.getCenterY() - centerY) * DAMPING;
 
-        if (this.velocityY > MAX_SPEED_Y) {
-            this.velocityY = MAX_SPEED_Y;
-        } else if (this.velocityY < -MAX_SPEED_Y) {
-            this.velocityY = -MAX_SPEED_Y;
+        if (this.velocityY > this.max_speed_y) {
+            this.velocityY = this.max_speed_y;
+        } else if (this.velocityY < -this.max_speed_y) {
+            this.velocityY = -this.max_speed_y;
         }
     }
 
@@ -57,6 +57,11 @@ public class Ball extends GameObject {
 
         this.velocityY = 0;
         this.velocityX *= -1;
+    }
+
+    public void setMaxSpeed(float maxSpeed) {
+        this.max_speed_x = maxSpeed;
+        this.max_speed_y = maxSpeed;
     }
 
 }
