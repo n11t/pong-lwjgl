@@ -1,14 +1,12 @@
-# Einrichtung
+# Einrichtung Entwicklung
 
 ## Voraussetzungen
 
 * [Maven](http://maven.apache.org/) muss installiert sein
 
-## Installation
+## Einrichtung
 
     git clone https://github.com/n11t/pong-lwjgl.git
-    cd pong
-    mvn clean install
 
 * Das Projekt in Eclipse als `Existing Maven Projekt` einbinden
 * Das Projekt als Java-Applikation ausfuehren
