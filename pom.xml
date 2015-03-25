@@ -13,8 +13,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <version.source>1.8</version.source>
-        <version.target>1.8</version.target>
+        <version.source>1.7</version.source>
+        <version.target>1.7</version.target>
 
         <version.lwjgl>2.8.4</version.lwjgl>
         <version.lwjgl-util>2.8.4</version.lwjgl-util>
